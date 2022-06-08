@@ -34,35 +34,35 @@
                 android:layout_height="wrap_content"
                 android:text="Judul Buku"
                 android:textColor="@color/black"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Penerbit"
                 android:textColor="@color/black"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tahun Terbit"
                 android:textColor="@color/black"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Penulis"
                 android:textColor="@color/black"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cover Buku"
                 android:textColor="@color/black"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"/>
     </LinearLayout>
         <LinearLayout
@@ -75,25 +75,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp" />
+
             <EditText
                 android:id="@+id/etAddPenerbit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/etAddTahunTerbit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp" />
-
+            <EditText
+                android:id="@+id/etAddPenulis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
             <ImageView
                 android:id="@+id/ivGambar"
                 android:layout_width="130dp"
                 android:layout_height="150dp"
                 app:srcCompat="@mipmap/ic_launcher_round" />
             <Button
-                android:id="@+id/btnCover"
+                android:id="@+id/btnGambar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Select Image"
@@ -101,6 +106,7 @@
         </LinearLayout>
     </LinearLayout>
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddBuku"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Upload Buku"

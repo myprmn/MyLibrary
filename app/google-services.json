@@ -8,7 +8,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:944432652128:android:3f56d64c28dc768611c805",
+        "mobilesdk_app_id": "1:944432652128:android:32cdd52e2e43c10811c805",
         "android_client_info": {
           "package_name": "com.example.mylibrary"
         }

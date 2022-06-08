@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -15,6 +16,7 @@ class SignUp : AppCompatActivity() {
 
     lateinit var  dbSignUp: DatabaseReference
     lateinit var  mAuth : FirebaseAuth
+    lateinit var  btnLogin : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +24,7 @@ class SignUp : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
         dbSignUp = FirebaseDatabase.getInstance().reference
+        btnLogin = findViewById(R.id.btnSignInOnSignUp)
 
         btnSignUp.setOnClickListener {
             val name = etNamaSignUp.text.toString()
@@ -34,9 +37,11 @@ class SignUp : AppCompatActivity() {
                 Toast.makeText(this, "Masih ada field yang kosong",Toast.LENGTH_SHORT).show()
         }
         }
-        btnSignInOnSignUp.setOnClickListener {
-            startActivity(Intent(this, SignIn::class.java))
+
+        btnLogin.setOnClickListener {
+            startActivity(Intent(this,SignIn::class.java))
         }
+
     }
 
     private fun signUp(email: String, password: String) {
